@@ -1,0 +1,262 @@
+/* Genel stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 10px;
+    background-color:#000000;
+    color: #7f3939; /* Burayı beyaz yaptım */
+}
+footer{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    
+}
+
+header .logo {
+    font-size: 10px;
+    font-weight: bold;
+    color: #ffffff; /* Kardeşler Lokantası rengi beyaz yapıldı */
+}
+
+header nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Menü kategorileri */
+.menu-category {
+    margin: 20px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu-category img {
+    width: 100%;
+    height: auto;
+    max-width: 100px; /* Varsayılan maksimum genişlik */
+    margin-bottom: 10px;
+}
+
+.menu-category h2 {
+    margin: 10px 0;
+}
+
+/* Logo stili */
+.logo img {
+    width: 80%;
+    height: 200;
+}
+
+/* Hakkımızda bölümü */
+#about {
+    padding: 20px;
+    text-align: center;
+}
+
+#about img {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Varsayılan maksimum genişlik */
+    margin-bottom: 20px;
+}
+
+/* Rezervasyon bölümü */
+#reservation {
+    padding: 20px;
+    text-align: center;
+}
+
+#reservation-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+#reservation-form label,
+#reservation-form input,
+#reservation-form button {
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* İletişim bölümü */
+#contact {
+    padding: 20px;
+    text-align: center;
+}
+
+#contact p {
+    margin: 10px 0;
+}
+
+/* Mobil (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 10px 0;
+    }
+
+    .menu-category {
+        margin: 10px;
+    }
+
+    .menu-category img,
+    #about img {
+        max-width: 100%; /* Mobil için görüntü genişliğini maksimum yap */
+    }
+
+    .bg-bordo {
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid #8a8382; /* Tomato renginde sınır */
+    }
+    .logo-konteyner, .baslik-paragraf {
+        justify-content: center;
+        text-align: center;
+        margin-right: 0;
+        border: 2px solid #ffffff; /* Steel Blue renginde sınır */
+    }
+    .logo-konteyner svg {
+        margin-left: 20px;
+        width: 100px; /* Küçük logo boyutu mobil için */
+        border: 2px solid #3cb371; /* Medium Sea Green renginde sınır */
+    }
+    .dropdown {
+        display: block;
+        text-align: right;
+        margin: 5px;
+        border: 2px solid #dda0dd; /* Plum renginde sınır */
+    }
+    .menu-konteyner {
+        display: none;
+    }
+    img.responsive-img {
+        max-width: 100%;
+        border: 2px solid #faefec; /* Orange Red renginde sınır */
+    }
+}
+
+/* Tablet (481px - 1200px) */
+@media (min-width: 481px) and (max-width: 1200px) {
+    header nav a {
+        margin-left: 15px;
+    }
+
+    .menu-category {
+        margin: 15px;
+    }
+
+    .menu-category img,
+    #about img {
+        max-width: 250px; /* Tabletler için maksimum genişlik */
+    }
+
+    .dropdown {
+        display: block;
+        text-align: right;
+        margin: 5px;
+        border: 2px solid #dda0dd; /* Plum renginde sınır */
+    }
+    .menu-konteyner {
+        display: none;
+    }
+    img.responsive-img {
+        max-width: 100%;
+        border: 2px solid #ffffff; /* Orange Red renginde sınır */
+    }
+    .logo-konteyner svg {
+        width: 150px; /* Orta boy logo tabletler için */
+        border: 2px solid #3cb371; /* Medium Sea Green renginde sınır */
+    }
+}
+
+/* Desktop (1201px - 1600px) */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .menu-category img,
+    #about img {
+        max-width: 100px; /* Dizüstü bilgisayarlar için maksimum genişlik */
+    }
+
+    .menu-category {
+        margin: 20px;
+    }
+
+    .desktop-menu-konteyner {
+        display: flex;
+        justify-content: flex-end;
+        border: 2px solid #8a2be2; /* Blue Violet renginde sınır */
+    }
+    .ozel-jumbotron {
+        width: 100%;
+        margin-right: 0;
+        border: 2px solid #ff1493; /* Deep Pink renginde sınır */
+    }
+    img.responsive-img {
+        max-width: 100%;
+        border: 2px solid #ffffff; /* Orange Red renginde sınır */
+    }
+    .logo-konteyner svg {
+        width: 200px; /* Büyük boy logo masaüstü için */
+        border: 2px solid #3cb371; /* Medium Sea Green renginde sınır */
+    }
+}
+
+/* Large Desktop (min-width: 1601px) */
+@media (min-width: 1601px) {
+    .menu-category img,
+    #about img {
+        max-width: 10%; /* Masaüstü bilgisayarlar için maksimum genişlik */
+    }
+
+    .menu-category {
+        margin: 30px;
+    }
+
+    .desktop-menu-konteyner {
+        display: flex;
+        justify-content: flex-end;
+        border: 2px solid #8a2be2; /* Blue Violet renginde sınır */
+    }
+    .ozel-jumbotron {
+        width: 100%;
+        margin-right: 0;
+        border: 2px solid #ff1493; /* Deep Pink renginde sınır */
+    }
+    img.responsive-img {
+        max-width: 100%;
+        border: 2px solid #ff4500; /* Orange Red renginde sınır */
+    }
+    .logo-konteyner svg {
+        width: 250px; /* En büyük logo boyutu büyük masaüstü için */
+        border: 2px solid #3cb371; /* Medium Sea Green renginde sınır */
+    }
+}
