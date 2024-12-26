@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kardeşler Restorant - İletişim ve Rezervasyon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Kardeşler Lokantası</div>
+        <nav class="menu">
+            <a href="index.html">Ana sayfa</a>
+            <a href="ürünler.html">Menü</a>
+            <a href="rezervasyon.html">Rezervasyon ve İletişim</a>
+            
+        </nav>
+    </header>
+
+    <!-- Rezervasyon Bölümü -->
+    <section id="reservation">
+        <h2>Rezervasyon Yap</h2>
+        <form id="reservation-form">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Tarih:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Saat:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Kişi Sayısı:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <button type="submit">Rezervasyon Yap</button>
+        </form>
+        <p id="reservation-success" class="hidden">Rezervasyonunuz başarıyla alındı!</p>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section id="contact">
+        <h2>İletişim</h2>
+        <p>Adres: Konya/Türkiye</p>
+        <p>Telefon: +90 555 123 4567</p>
+        <p>Email: info@restoran.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kardeşler Restorant. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
